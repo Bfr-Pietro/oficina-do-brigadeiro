@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oficina do Brigadeiro - Os Melhores Brigadeiros Artesanais</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span>Oficina do Brigadeiro</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li>
+                        <button class="cart-btn" onclick="toggleCart()">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="word">Brigadeiros</span>
+                    <span class="word">Artesanais</span>
+                    <span class="word">Irresistíveis</span>
+                </h1>
+                <p class="hero-subtitle">Feitos com amor e os melhores ingredientes para adoçar seus momentos especiais</p>
+                <button class="cta-button" onclick="scrollToSection('produtos')">
+                    <span>Ver Produtos</span>
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="floating-brigadeiro">
+                    <img src="/placeholder.svg?height=300&width=300" alt="Brigadeiro">
+                </div>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="sprinkle"></div>
+            <div class="sprinkle"></div>
+            <div class="sprinkle"></div>
+            <div class="sprinkle"></div>
+            <div class="sprinkle"></div>
+        </div>
+    </section>
+
+    <!-- Produtos Section -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2 class="section-title">Nossos Brigadeiros</h2>
+            <div class="produtos-grid">
+                <div class="produto-card" data-aos="fade-up">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Brigadeiro Tradicional">
+                        <div class="produto-overlay">
+                            <button class="add-to-cart" onclick="addToCart('tradicional', 'Brigadeiro Tradicional', 25.00)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Brigadeiro Tradicional</h3>
+                        <p>O clássico que todos amam, feito com chocolate belga</p>
+                        <div class="produto-price">R$ 25,00</div>
+                        <small>Caixa com 15 unidades</small>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Brigadeiro Branco">
+                        <div class="produto-overlay">
+                            <button class="add-to-cart" onclick="addToCart('branco', 'Brigadeiro Branco', 28.00)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Brigadeiro Branco</h3>
+                        <p>Delicioso chocolate branco com coco ralado</p>
+                        <div class="produto-price">R$ 28,00</div>
+                        <small>Caixa com 15 unidades</small>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Brigadeiro Gourmet">
+                        <div class="produto-overlay">
+                            <button class="add-to-cart" onclick="addToCart('gourmet', 'Brigadeiro Gourmet', 35.00)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Brigadeiro Gourmet</h3>
+                        <p>Sabores especiais: pistache, maracujá, limão</p>
+                        <div class="produto-price">R$ 35,00</div>
+                        <small>Caixa com 12 unidades</small>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="produto-image">
+                        <img src="/placeholder.svg?height=250&width=250" alt="Mix de Brigadeiros">
+                        <div class="produto-overlay">
+                            <button class="add-to-cart" onclick="addToCart('mix', 'Mix de Brigadeiros', 32.00)">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Mix de Brigadeiros</h3>
+                        <p>Variedade de sabores em uma só caixa</p>
+                        <div class="produto-price">R$ 32,00</div>
+                        <small>Caixa com 15 unidades</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-text" data-aos="fade-right">
+                    <h2>Nossa História</h2>
+                    <p>Na <strong>Oficina do Brigadeiro</strong>, cada doce é uma obra de arte feita com muito carinho e os melhores ingredientes. Nossa paixão por brigadeiros começou em casa e hoje se transformou em uma empresa dedicada a levar felicidade através dos nossos doces artesanais.</p>
+                    <p>Utilizamos apenas chocolate belga premium, leite condensado de primeira qualidade e muito amor em cada receita. Nossos brigadeiros são perfeitos para festas, presentes ou simplesmente para adoçar o seu dia.</p>
+                    <div class="sobre-stats">
+                        <div class="stat">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Brigadeiros Vendidos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Artesanal</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Entrega Rápida</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-image" data-aos="fade-left">
+                    <img src="/placeholder.svg?height=400&width=400" alt="Fazendo Brigadeiros">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info" data-aos="fade-right">
+                    <div class="contato-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>@oficina_do_brigadeiro</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contato-form" data-aos="fade-left">
+                    <form>
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                        <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Seu carrinho está vazio</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R$ <span id="cartTotal">0,00</span></strong>
+            </div>
+            <textarea id="orderComment" placeholder="Comentários sobre o pedido (opcional)"></textarea>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fab fa-instagram"></i>
+                Finalizar no Instagram
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span>Oficina do Brigadeiro</span>
+                </div>
+                <p>&copy; 2024 Oficina do Brigadeiro. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
